@@ -1,4 +1,4 @@
-package me.jramun.cucumber
+package me.jramun.basic
 
 
 import org.assertj.core.api.Assertions

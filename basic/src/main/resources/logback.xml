@@ -6,7 +6,7 @@
         </encoder>
     </appender>
 
-    <logger name="me.jramun.cucumber" level="DEBUG" />
+    <logger name="me.jramun.basic" level="DEBUG" />
     <logger name="io" level="WARN" />
     <logger name="org" level="WARN" />
     <logger name="com" level="WARN" />

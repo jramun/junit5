@@ -1,4 +1,4 @@
-package me.jramun.cucumber
+package me.jramun.basic
 
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
