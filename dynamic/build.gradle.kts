@@ -1,11 +1,17 @@
+import Build_gradle.Versions.jupiter
+import Build_gradle.Versions.logback
+import Build_gradle.Versions.self4j
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+
+object Versions {
+    const val jupiter = "5.8.2"
+    const val logback = "1.2.11"
+    const val self4j = "1.7.36"
+}
 
 plugins {
     application
-//	id("org.springframework.boot") version "2.6.6"
-//	id("io.spring.dependency-management") version "1.0.11.RELEASE"
     kotlin("jvm") version "1.6.10"
-    kotlin("plugin.spring") version "1.6.10"
 }
 
 group = "me.jramun"
@@ -17,13 +23,12 @@ repositories {
 }
 
 dependencies {
-//	implementation("org.springframework.boot:spring-boot-starter")
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
-    testImplementation("org.junit.jupiter:junit-jupiter-api:5.8.2")
-    testImplementation("org.junit.jupiter:junit-jupiter-engine:5.8.2")
-
-//	testImplementation("org.springframework.boot:spring-boot-starter-test")
+    implementation("org.slf4j:slf4j-api:$self4j")
+    testImplementation("org.junit.jupiter:junit-jupiter-api:$jupiter")
+    testImplementation("org.junit.jupiter:junit-jupiter-engine:$jupiter")
+    testImplementation("ch.qos.logback:logback-classic:$logback")
 }
 
 tasks.withType<KotlinCompile> {
